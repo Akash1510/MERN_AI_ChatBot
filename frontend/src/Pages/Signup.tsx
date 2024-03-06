@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { UseAuth } from '../Context/AuthContext.tsx';
 import {toast} from 'react-hot-toast';
-import{Box, Typography,Button ,Checkbox} from "@mui/material";
+import{Box, Typography,Button} from "@mui/material";
 import CustomizedInput from '../Components/Shered/CustomizedInput.tsx';
 import { IoIosLogIn } from 'react-icons/io';
 

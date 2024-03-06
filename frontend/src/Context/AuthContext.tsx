@@ -1,6 +1,6 @@
 import { ReactNode, createContext, useContext, useEffect, useState } from "react";
 import { checkAuthStatus, forgotPassword, loginUser,logoutUser,signupUser } from "../Helpers/Api_Comminication.tsx";
-import { TfiRulerAlt } from "react-icons/tfi";
+
 
 
 type User = {
