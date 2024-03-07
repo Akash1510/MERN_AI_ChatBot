@@ -1,7 +1,6 @@
 import { Router } from "express";
 import userRouter from "./user_rout.js";
 import chatRouter from "./chat_routes.js";
-import mailRouter from "./mailroute.js";
 
 const appRouter = Router();
  
