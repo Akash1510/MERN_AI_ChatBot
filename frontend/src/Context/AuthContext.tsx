@@ -1,5 +1,5 @@
 import { ReactNode, createContext, useContext, useEffect, useState } from "react";
-import { checkAuthStatus, forgotPassword, loginUser,logoutUser,signupUser } from "../Helpers/Api_Comminication.tsx";
+import { checkAuthStatus, loginUser,logoutUser,signupUser } from "../Helpers/Api_Comminication.tsx";
 
 
 
@@ -14,7 +14,6 @@ type UserAuth = {
   login:(email:string,password:string)=>Promise<void>;
   signup:(name:string,email:string,password:string)=>Promise<void>;
   logout:()=>Promise<void>; 
-  forgot:(email:string)=>Promise<void>;
 };
 
 
@@ -70,19 +69,16 @@ export const AuthProvider = ({children}:{children:ReactNode})=>{
         }
    }
 
-   const forgot = async(email:string)=>{
-    const use = await forgotPassword(email);
-    console.log(use);
-  
 
-   }
+
+   
       const value = {
         user,
         isLoggedIn,
         login,
         signup,
         logout,
-        forgot
+      
       };
       return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
       

@@ -29,12 +29,12 @@ const Home = () => {
   gap:5,
   my:10
 }}>
-    <img src='./robot.png' alt="robot" style={{width:"200px",margin:"auto"}} />
-    <img className="image-inverted rotate" src='./openai.png' alt="openai" style={{width:"200px",margin:"auto"}} />
+    <img src='robot.png' alt="robot" style={{width:"200px",margin:"auto"}} />
+    <img className="image-inverted rotate" src='openai.png' alt="openai" style={{width:"200px",margin:"auto"}} />
 
     </Box>
     <Box sx={{display:"flex",mx:"auto"}}>
-      <img src='./chat.png' alt='chatbot' style={{display:"flex",margin:"auto",width:isBeloMd?"80%":"60%", borderRadius:20,boxShadow:"-5px -5px 105px 10px #64f3d5 ",marginTop:20,marginBottom:20,padding:10,}}/>
+      <img src='chat.png' alt='chatbot' style={{display:"flex",margin:"auto",width:isBeloMd?"80%":"60%", borderRadius:20,boxShadow:"-5px -5px 105px 10px #64f3d5 ",marginTop:20,marginBottom:20,padding:10,}}/>
     </Box>
     </Box>
     <Footer/>

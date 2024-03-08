@@ -90,12 +90,3 @@ export const logoutUser = async()=>{
 }
 
 
-export const forgotPassword = async(email:string)=>{
-  
-  const res = await axios.post(`/user/forgot-password`,{email:email});
-  if(res.status !== 201){
-    throw new Error("Unable to reset passwrod");
-  }
-  const data = await res.data;
-  return data;
-}

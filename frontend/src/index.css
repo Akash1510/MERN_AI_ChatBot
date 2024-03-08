@@ -9,6 +9,7 @@ html,body {
   color: white;
   font-family: "Roboto Slab",serif;
   
+  
 }
 
 .image-inverted{
@@ -24,6 +25,8 @@ html,body {
   border-radius: 10px;
   text-decoration: none;
   letter-spacing: 1px;
+  
+
 }
 
 .MuiOutlinedInput-input,

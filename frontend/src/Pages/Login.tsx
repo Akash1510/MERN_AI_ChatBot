@@ -92,7 +92,7 @@ const navigate = useNavigate();
           <div style={{display:'flex',padding:3 }}>
 
           <p style={{marginTop:'20px',textAlign:'center'}}>Don't have an Account ?<Link to={"/signup"} style={{textDecoration:'none',marginLeft:'7px' , color:'blue', textShadow:'1px 1px 20px 10px blue'}}>Sign Up</Link></p>
-          <p style={{marginTop:'20px',textAlign:'center'}}>Don't Remember a Password ?<Link to={"/forgotpassword"} style={{textDecoration:'none',marginLeft:'7px' , color:'blue', textShadow:'1px 1px 20px 10px blue'}}>Forgot Password</Link></p>
+          <p style={{marginTop:'20px',textAlign:'center'}}>Don't Remember a Password ?<Link to={"/change-password"} style={{textDecoration:'none',marginLeft:'7px' , color:'blue', textShadow:'1px 1px 20px 10px blue'}}>Forgot Password</Link></p>
 
           </div>
         </form>

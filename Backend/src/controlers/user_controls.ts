@@ -3,8 +3,7 @@ import User from "../models/user.js";
 import {hash,genSalt,compare} from 'bcrypt';   //use for the password hashing 
 import  {createToken } from "../utils/token_manager.js";
 import {COOKIE_NAME} from "../utils/auth_token.js";
-import nodemailer from 'nodemailer';
-import jwt  from "jsonwebtoken";
+
 
 
 
@@ -181,61 +180,11 @@ export const userLogout = async(
 
 };
 
-export const Forgot_Password = async(req:Request,res:Response,next:NextFunction)=>{
 
-  const {email} = req.body;
 
-  try{
-    const user = await User.findOne(email);
-    if(!user){
-      return res.status(401).json({message:"User not Exist"});
-    }
-    const secret = process.env.JWT_SECRET + user.password;
-    const token = jwt.sign({email:user.email,id:user._id},secret,{
-      expiresIn:'5m'
-    })
-    return token;
 
-  }
-  catch(err){
-    console.log("Email is Got");
-    return res.status(500).json({message:"Email Got"});
-  }
 
-}
 
-export const sendmail = async(req:Request,res:Response,next:NextFunction)=>{
-   
-  const{email,subject,message } = req.body
-  const transport = nodemailer.createTransport({
-    service:'Gmail',
-    auth:{
-      user:'email',
-      pass:'password'
-    }
-    
-  });
-    const mailOptions = {
-      from:'sendermail',
-    to : email,
-    subject:subject,
-    text: message
-
-  };
-  
-  transport.sendMail(mailOptions,(error,info)=>{
-    if(error){
-      console.log(error);
-      res.status(500).send("Internal server Error");
-    }
-    else{
-      console.log("Email Sent "+ info.response);
-      res.status(200).json({message:"Email sent SuccessFully "});
-    }
-  });
-  
-
-}
 
 
 

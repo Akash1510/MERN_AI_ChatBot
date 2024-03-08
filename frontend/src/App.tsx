@@ -5,7 +5,7 @@ import Home from "./Pages/Home.tsx"
 import Login from "./Pages/Login.tsx"
 import Signup from "./Pages/Signup.tsx"
 import Chat from "./Pages/Chat.tsx"
-import Not_Found_Page from "./Pages/Not_Found_Page.tsx"
+// import Not_Found_Page from "./Pages/Not_Found_Page.tsx"
 import { UseAuth } from "./Context/AuthContext.tsx"
 
 
@@ -29,7 +29,7 @@ const  App=()=> {
 
          <Route   path="/chat" element={<Chat/>}/>
        )}
-        <Route   path="/forgotpassword" element={<Not_Found_Page/>}/>
+        {/* <Route   path="/" element={<Not_Found_Page/>}/> */}
         
       </Routes>
 
